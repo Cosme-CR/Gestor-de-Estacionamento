@@ -44,13 +44,10 @@ public class telaSaida extends VBox {
         // corpo onde ficara as caixa de boao e dados e essa caixa e pra deixar as duad caixas uma do lado da outra
         HBox corpo = new HBox();
 
-
-
-
         //cria titulo da tela
         header.setStyle("-fx-padding: 10;-fx-background-color: blue;-fx-alignment: center;");
-        Label labelTitulo = new Label("Saida");
-        labelTitulo.setStyle("-fx-font-size: 30px;-fx-text-fill: white; -fx-font-weight: bold;");
+        Label labelTitulo = new Label("SAIDA");
+        labelTitulo.setStyle("-fx-font-size: 30px;-fx-text-fill: white; -fx-font-weight: lighter;");
 
         miniheader.setStyle("-fx-background-color: #343232;-fx-alignment: center;");
         Label labelMiniTitulo = new Label("Resultado");

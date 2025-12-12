@@ -27,7 +27,7 @@ public class telaInicial extends VBox {
         VBox header = new VBox();
         header.setStyle("-fx-padding: 10;-fx-background-color: blue;-fx-alignment: center;");
         Label labelTitulo = new Label("Carros Estacionados");
-        labelTitulo.setStyle("-fx-font-size: 30px;-fx-text-fill: white; -fx-font-weight: bold;");
+        labelTitulo.setStyle("-fx-font-size: 30px;-fx-text-fill: white; -fx-font-weight: lighter;");
         header.getChildren().add(labelTitulo);
 
         // caixa de botao
@@ -36,7 +36,7 @@ public class telaInicial extends VBox {
         boxBotao.setSpacing(90);
         boxBotao.setStyle("-fx-alignment: center;");
         //botao de entrada
-        Button botaoEntrada = new Button("Registrar nova entrada");
+        Button botaoEntrada = new Button("Registrar nova\n      Entrada");
         botaoEntrada.setStyle(
                 "-fx-font-size: 18px;" +
                         "-fx-padding: 15 30 15 30;" +
@@ -60,10 +60,10 @@ public class telaInicial extends VBox {
         });
 
         //botao de saida
-        Button botaoSaida = new Button("Registrar nova saída");
+        Button botaoSaida = new Button("       Registrar \n saída/pagamento");
         botaoSaida.setStyle(
                 "-fx-font-size: 18px;" +
-                        "-fx-padding: 15 30 15 30;" +
+                        "-fx-padding: 15 30 35 30;" +
                         "-fx-background-color: #d54747;" +
                         "-fx-background-radius: 20px;" +
                         "-fx-text-fill: white;" +

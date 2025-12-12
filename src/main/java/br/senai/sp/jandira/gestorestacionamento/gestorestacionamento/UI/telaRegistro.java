@@ -25,8 +25,8 @@ public class telaRegistro extends VBox {
         // HEADER
         VBox header = new VBox();
         header.setStyle("-fx-padding: 10;-fx-background-color: blue;-fx-alignment: center;");
-        Label labelTitulo = new Label("Cadatro de Entrada");
-        labelTitulo.setStyle("-fx-font-size: 30px;-fx-text-fill: white; -fx-font-weight: bold;");
+        Label labelTitulo = new Label("Cadastro de Entrada");
+        labelTitulo.setStyle("-fx-font-size: 30px;-fx-text-fill: white; -fx-font-weight: lighter;");
 
         // caixa principal onde ficara tudo
         HBox corpo = new HBox();
