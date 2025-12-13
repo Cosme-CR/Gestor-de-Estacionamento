@@ -1,11 +1,10 @@
 
 package br.senai.sp.jandira.gestorestacionamento.gestorestacionamento.UI;
 
+import br.senai.sp.jandira.gestorestacionamento.gestorestacionamento.model.Carro;
 import br.senai.sp.jandira.gestorestacionamento.gestorestacionamento.repository.CarroReposytory;
 import javafx.geometry.Insets;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.ListView;
+import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
@@ -36,16 +35,17 @@ public class telaInicial extends VBox {
         boxBotao.setSpacing(90);
         boxBotao.setStyle("-fx-alignment: center;");
         //botao de entrada
-        Button botaoEntrada = new Button("Registrar nova\n      Entrada");
+        Button botaoEntrada = new Button("Registrar nova \n     Entrada");
         botaoEntrada.setStyle(
                 "-fx-font-size: 18px;" +
-                        "-fx-padding: 15 30 15 30;" +
+                        "-fx-pref-width: 180;"+
+                        "-fx-pref-height: 240 ;" +
                         "-fx-background-color: #4CAF50;" +
                         "-fx-background-radius: 20px;" +
                         "-fx-text-fill: white;" +
                         "-fx-border-color: black;" +
                         "-fx-border-radius: 20px;" +
-                        "-fx-border-width: 1px;"
+                        "-fx-border-width: 2px;"
         );
 
         botaoEntrada.setOnAction(e -> {
@@ -62,14 +62,15 @@ public class telaInicial extends VBox {
         //botao de saida
         Button botaoSaida = new Button("       Registrar \n saída/pagamento");
         botaoSaida.setStyle(
-                "-fx-font-size: 18px;" +
-                        "-fx-padding: 15 30 35 30;" +
-                        "-fx-background-color: #d54747;" +
-                        "-fx-background-radius: 20px;" +
-                        "-fx-text-fill: white;" +
-                        "-fx-border-color: black;" +
-                        "-fx-border-radius: 20px;" +
-                        "-fx-border-width: 1px;"
+                    "-fx-font-size: 18px;" +
+                    "-fx-pref-height: 230 ;"+
+                    "-fx-background-color: #d54747;" +
+                    "-fx-background-radius: 20px;" +
+                    "-fx-text-fill: white;" +
+                    "-fx-border-color: black;" +
+                    "-fx-border-radius: 20px;" +
+                    "-fx-border-width: 2px;"
+
         );
 
         botaoSaida.setOnAction(e -> {
@@ -91,12 +92,7 @@ public class telaInicial extends VBox {
 
         ListView<String> listaCarros = new ListView<>();
 
-
-
         listaCarros.getItems().addAll(carrosExibidos);
-
-
-
 
         VBox caixaCarros = new VBox(listaCarros);
 
