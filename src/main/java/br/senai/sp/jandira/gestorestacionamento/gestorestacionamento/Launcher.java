@@ -1,4 +1,4 @@
-//package br.senrai.sp.jandira.gestorestacionamento.gestorestacionamento;
+package br.senai.sp.jandira.gestorestacionamento.gestorestacionamento;
 
 import br.senai.sp.jandira.gestorestacionamento.gestorestacionamento.HelloApplication;
 import javafx.application.Application;

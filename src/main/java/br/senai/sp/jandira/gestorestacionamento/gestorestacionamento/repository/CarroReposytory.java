@@ -17,8 +17,8 @@ import java.util.List;
 
 public class CarroReposytory    {
     //registro é o registro.csv
-    private Path registro = Paths.get("/Users/25203738/Documents/LOPAL/Gestor-de-Estacionamento/dados/registro.csv");
-    private Path historico = Paths.get("/Users/25203738/Documents/LOPAL/Gestor-de-Estacionamento/dados/dados/historico.csv");
+    private Path registro = Paths.get("/home/cosme/projetos/Projeto-Integrador-T1/Gestor-de-Estacionamento/dados/registro.csv");
+    private Path historico = Paths.get("/home/cosme/projetos/Projeto-Integrador-T1/Gestor-de-Estacionamento/dados/historico.csv");
 
  
     public void salvar (Carro carro) {
