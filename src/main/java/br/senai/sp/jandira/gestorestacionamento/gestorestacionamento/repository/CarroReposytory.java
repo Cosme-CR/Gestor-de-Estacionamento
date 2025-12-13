@@ -17,8 +17,13 @@ import java.util.List;
 
 public class CarroReposytory    {
     //registro é o registro.csv
+<<<<<<< HEAD
     private Path registro = Paths.get("C:\\Users\\May\\Documents\\Senai\\SENAITEC\\projeto_integrador\\Gestor-de-Estacionamento\\dados\\registro.csv");
     private Path historico = Paths.get("C:\\Users\\May\\Documents\\Senai\\SENAITEC\\projeto_integrador\\Gestor-de-Estacionamento\\dados\\historico.csv");
+=======
+    private Path registro = Paths.get("/home/cosme/projetos/Projeto-Integrador-T1/Gestor-de-Estacionamento/dados/registro.csv");
+    private Path historico = Paths.get("/home/cosme/projetos/Projeto-Integrador-T1/Gestor-de-Estacionamento/dados/historico.csv");
+>>>>>>> 12055856e8fb4a84818fc01c885436b3154c352b
 
  
     public void salvar (Carro carro) {
