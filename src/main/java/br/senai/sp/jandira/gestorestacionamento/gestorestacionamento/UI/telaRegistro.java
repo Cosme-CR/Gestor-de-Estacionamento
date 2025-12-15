@@ -24,7 +24,7 @@ public class telaRegistro extends VBox {
 
         // HEADER
         VBox header = new VBox();
-        header.setStyle("-fx-padding: 10;-fx-background-color: blue;-fx-alignment: center;");
+        header.setStyle("-fx-padding: 10;-fx-background-color: #404CCD;-fx-alignment: center;");
         Label labelTitulo = new Label("Cadastro de Entrada");
         labelTitulo.setStyle("-fx-font-size: 30px;-fx-text-fill: white; -fx-font-weight: lighter;");
 
@@ -40,10 +40,13 @@ public class telaRegistro extends VBox {
         TextField textfildModeloVeiculo = new TextField();
         Label TituloNomePropietario = new Label("Nome do propietario:");
         TextField textfildPropietario = new TextField();
+        Label status = new Label("");
 
 
         Label TituloDataEntrada = new Label("Data de entrada:");
+        TextField textFielddata =new TextField();
         Label TituloHoraEntrada = new Label("Hora de entrada:");
+        TextField textFielhora =new TextField();
 
 
         //como os botoes ficarao na tela/formulario
@@ -55,7 +58,10 @@ public class telaRegistro extends VBox {
         gridformulario.add(textfildPropietario, 1, 2);
 
         gridformulario.add(TituloDataEntrada, 0, 3);
+        gridformulario.add(textFielddata, 1,3);
         gridformulario.add(TituloHoraEntrada, 0, 4);
+        gridformulario.add(textFielhora, 1,4);
+        gridformulario.add(status,0,5);
 
         gridformulario.setStyle(
                 "-fx-hgap: 15px;" +
@@ -68,12 +74,14 @@ public class telaRegistro extends VBox {
 
         //caixa onde ficara os botao de  registrar e voltat
         VBox caixaDeBotao = new VBox();
+        caixaDeBotao.setSpacing(40);
+
 
         Button botaoVoltar = new Button("Voltar");
         botaoVoltar.setStyle(
                         "-fx-font-size: 18px;" +
                         "-fx-padding: 15 30 15 30;" +
-                        "-fx-background-color: #d54747;" +
+                        "-fx-background-color: #068791;" +
                         "-fx-background-radius: 20px;" +
                         "-fx-text-fill: white;" +
                         "-fx-border-color: black;" +
@@ -95,26 +103,41 @@ public class telaRegistro extends VBox {
         Button botaoRegistrar = new Button("Registrar");
         botaoRegistrar.setOnAction(e -> {
             LocalDateTime data = LocalDateTime.now();
-
-
             CarroReposytory cr = new CarroReposytory();
 
-            Carro carro = new Carro();
+            String aux = textfildPlaca.getText();
 
-            carro.id = UUID.randomUUID().toString();
-            carro.placa = textfildPlaca.getText();
-            carro.modelo = textfildModeloVeiculo.getText();
-            carro.nomePropietario = textfildPropietario.getText();
-            carro.data =  data.toLocalDate().toString();
-            carro.hora =  data.toLocalTime().toString();
-            carro.visibilidade = true  ;
+            if (textfildPlaca.getText().isEmpty() || textfildPropietario.getText().isEmpty() || textfildModeloVeiculo.getText().isEmpty()){
+                textfildPlaca.setText("Preencha todos os campos");
+                textfildModeloVeiculo.setText("Preencha todos os campos");
+                textfildPropietario.setText("Preencha todos os campos");
 
-            cr.salvar(carro);
+            } else if (cr.busca(aux) != null)  {
+                textfildPlaca.setText("placa ja registrada");
 
-            //limpa tela
-            textfildPlaca.setText("");
-            textfildModeloVeiculo.setText("");
-            textfildPropietario.setText("");
+            }else {
+
+                Carro carro = new Carro();
+
+                carro.id = UUID.randomUUID().toString();
+                carro.placa = textfildPlaca.getText();
+                carro.modelo = textfildModeloVeiculo.getText();
+                carro.nomePropietario = textfildPropietario.getText();
+                carro.data = data.toLocalDate().toString();
+                carro.hora = data.toLocalTime().toString();
+                carro.visibilidade = true;
+
+                textFielddata.setText(data.toLocalDate().toString());
+                textFielhora.setText(data.toLocalTime().toString().substring(0, 5));
+
+                cr.salvar(carro);
+
+                //limpa tela
+                textfildPlaca.setText("");
+                textfildModeloVeiculo.setText("");
+                textfildPropietario.setText("");
+                status.setText("registrado");
+            }
 
 
         });
@@ -123,7 +146,7 @@ public class telaRegistro extends VBox {
         botaoRegistrar.setStyle(
                 "-fx-font-size: 18px;" +
                         "-fx-padding: 15 30 15 30;" +
-                        "-fx-background-color: #068791;" +
+                        "-fx-background-color: #4CD745;" +
                         "-fx-background-radius: 20px;" +
                         "-fx-text-fill: white;" +
                         "-fx-border-color: black;" +

@@ -34,6 +34,7 @@ public class telaSaida extends VBox {
 
         //caixa onde ficara os botao
         VBox caixaDeBotao = new VBox();
+        caixaDeBotao.setSpacing(40);
 
         //cria caixa que ficara o campo de busca
         VBox caixaDeDados = new VBox();
@@ -45,7 +46,7 @@ public class telaSaida extends VBox {
         HBox corpo = new HBox();
 
         //cria titulo da tela
-        header.setStyle("-fx-padding: 10;-fx-background-color: blue;-fx-alignment: center;");
+        header.setStyle("-fx-padding: 10;-fx-background-color: #404CCD;-fx-alignment: center;");
         Label labelTitulo = new Label("SAIDA");
         labelTitulo.setStyle("-fx-font-size: 30px;-fx-text-fill: white; -fx-font-weight: lighter;");
 
@@ -58,7 +59,7 @@ public class telaSaida extends VBox {
         Label labelBuscaPlaca = new Label("Placa do veiculo");
         TextField textFieldbuscaPlaca = new TextField();
 
-        Label teste = new Label("teste");
+
 
 
         GridPane gridresultado = new GridPane();
@@ -77,6 +78,7 @@ public class telaSaida extends VBox {
         TextField textfildHoraSaida = new TextField();
         Label tituloValorPagar = new Label("Valor Total:");
         TextField textfildValorPagar = new TextField();
+        Label status =new Label("");
 
 
 
@@ -94,11 +96,12 @@ public class telaSaida extends VBox {
         gridresultado.add(textfildHoraSaida, 1, 4);
         gridresultado.add(tituloValorPagar, 0, 5);
         gridresultado.add(textfildValorPagar, 1, 5);
+        gridresultado.add(status , 0,6);
 
         gridresultado.setStyle(
                 "-fx-hgap: 15px;" +
-                        "-fx-vgap: 12px;" +
-                        "-fx-padding: 20px;"  // espaço interno do GridPane
+                "-fx-vgap: 12px;" +
+                "-fx-padding: 20px;"  // espaço interno do GridPane
         );
 
 
@@ -130,8 +133,9 @@ public class telaSaida extends VBox {
                 textfildPlaca.setText(dados[1]);          // placa
                 textfildModeloVeiculo.setText(dados[2]);  // modelo
                 textfildPropietario.setText(dados[3]);    // proprietário
-                textfildHoraEntrada.setText(dados[5]);
-                textfildHoraSaida.setText(dados[8]);
+                textfildHoraEntrada.setText(dados[5].substring(0, 5));
+                textfildHoraSaida.setText(dados[8].substring(0, 5));
+
                 textfildValorPagar.setText(dados[9]);
 
 
@@ -139,7 +143,7 @@ public class telaSaida extends VBox {
                 textfildPlaca.setText("");
                 textfildModeloVeiculo.setText("");
                 textfildPropietario.setText("");
-                teste.setText("nao encontrado");
+                status.setText("nao encontrado");
 
             }
 
@@ -150,7 +154,7 @@ public class telaSaida extends VBox {
         botaoVoltar.setStyle(
                 "-fx-font-size: 18px;" +
                 "-fx-padding: 15 30 15 30;" +
-                "-fx-background-color: #d54747;" +
+                "-fx-background-color: #068791;" +
                 "-fx-background-radius: 20px;" +
                 "-fx-text-fill: white;" +
                 "-fx-border-color: black;" +
@@ -189,7 +193,7 @@ public class telaSaida extends VBox {
             boolean ok = repo.registrarSaida(placa);
 
             if (ok) {
-                teste.setText("Saída registrada!");
+                status.setText("Saída registrada!");
 
                 // limpa campos
                 textfildPlaca.setText("");
@@ -200,7 +204,7 @@ public class telaSaida extends VBox {
                 textfildValorPagar.setText("");
 
             } else {
-                teste.setText("Carro não encontrado ou já saiu!");
+                status.setText("Carro não encontrado ou já saiu!");
             }
 
 

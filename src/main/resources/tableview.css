@@ -1,0 +1,14 @@
+
+
+.table-row-cell:odd{
+    -fx-background-color: blue;
+}
+.table-row-cell:even{
+    -fx-background-color: #5f5fb6;
+}
+.table-cell{
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+
+}
