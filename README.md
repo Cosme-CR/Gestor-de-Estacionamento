@@ -81,7 +81,7 @@ O cálculo é feito automaticamente com base na diferença entre a data/hora de 
 
 ---
 
-## 🗂️ Estrutura do Projeto
+##  Estrutura do Projeto
 
 ```
 Gestor-de-Estacionamento
@@ -107,20 +107,20 @@ Gestor-de-Estacionamento
 
 ---
 
-## ⚙️ Tecnologias Utilizadas
+##  Tecnologias Utilizadas
 
-- ☕ **Java**
+-  **Java**
     
-- 🎨 **JavaFX**
+-  **JavaFX**
     
-- 📄 **Arquivos CSV** para persistência
+-  **Arquivos CSV** para persistência
     
-- 🧱 **Programação Orientada a Objetos (POO)**
+-  **Programação Orientada a Objetos (POO)**
     
 
 ---
 
-## ▶️ Como Executar
+##  Como Executar
 
 1. Clone o repositório:
     
@@ -137,7 +137,7 @@ Gestor-de-Estacionamento
 
 ---
 
-## 👨‍💻 Autores
+##  Autores
 
 Projeto desenvolvido como atividade acadêmica no **SENAI Jandira**.
 
