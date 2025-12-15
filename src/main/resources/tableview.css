@@ -1,10 +1,55 @@
+/* Texto do título (Placa, Modelo, Hora...) */
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-background-color: black;
+    -fx-font-weight: bold;
+    -fx-font-size: 14px;
+}
 
 
+/* Linhas ímpares */
+.table-row-cell:odd {
+    -fx-background-color: black;
+}
+
+/* Linhas pares */
+.table-row-cell:even {
+    -fx-background-color: #E4C8A9;
+}
+
+/* Texto das células */
+.table-cell {
+    -fx-font-size: 14px;
+    -fx-padding: 10px;
+}
+
+/* Texto por linha */
+.table-row-cell:odd .table-cell {
+    -fx-text-fill: white;
+}
+
+.table-row-cell:even .table-cell {
+    -fx-text-fill: black;
+}
+
+/* Linha selecionada */
+.table-row-cell:selected {
+    -fx-background-color: #6b4f3f;
+}
+
+.table-row-cell:selected .table-cell {
+    -fx-text-fill: white;
+}
+
+
+
+/*
+exemplo
 .table-row-cell:odd{
-    -fx-background-color: blue;
+    -fx-background-color: black;
 }
 .table-row-cell:even{
-    -fx-background-color: #5f5fb6;
+    -fx-background-color: #E4C8A9;
 }
 .table-cell{
     -fx-text-fill: white;
@@ -12,3 +57,4 @@
     -fx-padding: 10px;
 
 }
+*/

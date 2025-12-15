@@ -209,7 +209,7 @@ public class CarroReposytory    {
 
 
     public String calculo(String horaEntrada, String dataEntrada){
-        String valorPagoTexto = " ";
+
         // Converte data e hora de entrada
         LocalDate data = LocalDate.parse(dataEntrada);
         LocalTime hora = LocalTime.parse(horaEntrada);
