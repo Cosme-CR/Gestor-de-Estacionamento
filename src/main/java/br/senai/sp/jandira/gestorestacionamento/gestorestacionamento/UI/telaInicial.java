@@ -128,6 +128,9 @@ public class telaInicial extends VBox {
                 colunaData,
                 colunaHora
         );
+
+
+
         //nao deixa ter colunas extra
         tabelaCarros.setItems(FXCollections.observableArrayList(dados));
 
