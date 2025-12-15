@@ -140,8 +140,10 @@ Gestor-de-Estacionamento
 2. Abra o projeto no **IntelliJ IDEA Ultimate**
     
 3. Certifique-se de que o **JavaFX** está configurado corretamente
+
+4. Certifiquese de alterar o caminho dos arquivos na classe CarroReposytory.java para o caminho que esta a pasta dados em sua maquina (a pasta é baixada na mesma pasta do projeto) 
     
-4. Execute o  arquivo **Launcher.java**
+5. Execute o  arquivo **Launcher.java**
     
 
 ---
