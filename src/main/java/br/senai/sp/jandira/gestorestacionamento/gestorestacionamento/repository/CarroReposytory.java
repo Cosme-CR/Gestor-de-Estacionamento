@@ -46,51 +46,6 @@ public class CarroReposytory    {
         }
     }
 
-/*
-    public List<String> exibir (){
-        List<String> nomel = new ArrayList<>();
-        List<String> placal = new ArrayList<>();
-        List<String> carrol = new ArrayList<>();
-       // List<String> carros = new ArrayList<>();
-
-        try {
-            List<String> Linhas = Files.readAllLines(registro);
-            for(String linha : Linhas){
-                String[] linhaCarro = linha.split(";");
-                if (linhaCarro[6].equals("true")) {
-                    String placa = linhaCarro[1];
-                    String modelo = linhaCarro[2];
-                    String nomePropietario = linhaCarro[3];
-                    String data = linhaCarro[4];
-                    String hora = linhaCarro[5];
-
-                    //formata horas
-                    String diaMes = data.substring(8, 10) + "-" + data.substring(5, 7);
-                    // Formata hora para HH:mm
-                    String horaMin = hora.substring(0, 5);
-
-                    // Linha formatada com colunas fixas
-                    String nome = String.format(nomePropietario);
-                    String placal = String.format(placa);
-                    String carrol = String.format(modelo);
-
-
-                }
-            }
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-
-        return nomel,placal,carrol;
-
-
-    }
-
-*/
-
-
-
-
     public List<String[]> exibir() {
 
         // lista final que a tabela vai usar
@@ -144,24 +99,6 @@ public class CarroReposytory    {
         return carros;
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     public String[] busca(String placaBuscada) {
 
         try {
@@ -195,18 +132,6 @@ public class CarroReposytory    {
         return null; // não achou
     }
 
-    public String converte (){
-        String convertido= "";
-
-
-
-
-        return convertido;
-    };
-
-
-
-
 
     public String calculo(String horaEntrada, String dataEntrada){
 
@@ -220,6 +145,8 @@ public class CarroReposytory    {
         long minutos = Duration.between(entrada, saida).toMinutes();
 
         double valor = 10.0; // valor base até 1h
+
+
         if (minutos > 60) {
             long minutosExtras = minutos - 60;
 
@@ -271,7 +198,6 @@ public class CarroReposytory    {
                 novasLinhas.add(linha);
             }
 
-            // salva tudo de volta
             Files.write(registro, novasLinhas);
 
             salvahistorico(Arrays.toString(busca(placaBuscada)));

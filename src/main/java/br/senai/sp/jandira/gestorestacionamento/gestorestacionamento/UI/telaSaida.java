@@ -59,9 +59,6 @@ public class telaSaida extends VBox {
         Label labelBuscaPlaca = new Label("Placa do veiculo");
         TextField textFieldbuscaPlaca = new TextField();
 
-
-
-
         GridPane gridresultado = new GridPane();
 
         //criacao dos titulos da tela resultado

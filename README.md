@@ -102,7 +102,16 @@ Gestor-de-Estacionamento
 │   └── historico.csv
 │
 └── resources
-    └── tableview.css
+|    └── tableview.css
+|    
+└── HelloAplication.java
+|    
+└── HelloController.java
+|    
+└── Launcher.java
+    
+    
+    
 ```
 
 ---
@@ -128,11 +137,11 @@ Gestor-de-Estacionamento
     git clone https://github.com/seu-usuario/Gestor-de-Estacionamento.git
     ```
     
-2. Abra o projeto no **IntelliJ IDEA** (ou outra IDE compatível)
+2. Abra o projeto no **IntelliJ IDEA Ultimate**
     
 3. Certifique-se de que o **JavaFX** está configurado corretamente
     
-4. Execute a classe principal do projeto
+4. Execute o  arquivo **Launcher.java**
     
 
 ---
